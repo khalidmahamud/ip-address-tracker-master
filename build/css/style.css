@@ -569,12 +569,12 @@ video {
   height: 15rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-auto{
   height: auto;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .max-h-screen{
@@ -766,10 +766,6 @@ video {
 
   .md\:gap-7{
     gap: 1.75rem;
-  }
-
-  .md\:border-r-2{
-    border-right-width: 2px;
   }
 
   .md\:border-l-2{
