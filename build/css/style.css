@@ -733,11 +733,6 @@ video {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-
-  .sm\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 768px){
@@ -795,11 +790,6 @@ video {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
-
-  .md\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (min-width: 1024px){
@@ -823,10 +813,5 @@ video {
 
   .lg\:pr-10{
     padding-right: 2.5rem;
-  }
-
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
