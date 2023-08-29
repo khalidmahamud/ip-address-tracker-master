@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    .top {
+        @apply bg-[url('/build/images/pattern-bg-mobile.png')] md:bg-[url('/build/images/pattern-bg-desktop.png')]
+    }
+}
