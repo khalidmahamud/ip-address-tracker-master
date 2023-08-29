@@ -4,16 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <main>
-    <div>
-      
+  <main class="w-screen max-h-screen">
+    <div class="w-full h-full flex flex-col items-center justify-center">
+      <div class="top w-full h-60 p-5 bg-map-pattern-mobile md:bg-map-pattern-desktop bg-cover bg-center">
+        <div class="flex flex-col gap-5 md:gap-7 max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-rubik font-[500] text-white text-center">IP Address Tracker</h1>
+          <div class="flex w-full sm:max-w-lg justify-center self-center">
+            <input type="search" class="w-full rounded-l-xl px-3 text-xs md:text-lg" placeholder="Search for any IP address or domain">
+            <button type="submit" class="bg-black p-3 sm:p-4 rounded-r-xl"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+          </div>
+          <div class="info-card w-full p-5 lg:px-0 lg:py-7 md:mt-5 relative flex flex-col md:flex-row gap-3 justify-center md:justify-between items-center text-center font-rubik bg-white rounded-xl shadow-lg">
+            <div class="ip-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-r-2 md:border-Dark-Gray">
+              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">IP ADDRESS</p>
+              <p class="text-Very-Dark-Gray font-[500] text-lg md:text-xl lg:text-2xl">192.212.174.101</p>
+            </div>
+            <div class="location-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-r-2 md:border-Dark-Gray">
+              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">LOCATION</p>
+              <p class="text-Very-Dark-Gray font-[500] text-lg md:text-xl lg:text-2xl">Brooklyn, NY 10001</p>
+            </div>
+            <div class="timezone-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-r-2 md:border-Dark-Gray">
+              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">TIMEZONE</p>
+              <p class="text-Very-Dark-Gray font-[500] text-lg md:text-xl lg:text-2xl">UTC-05:00</p>
+            </div>
+            <div class="isp-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left">
+              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">ISP</p>
+              <p class="text-Very-Dark-Gray font-[500] text-lg md:text-xl lg:text-2xl">SpaceX Starlink</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        
+        <div class="map"></div>
+      </div>
     </div>
   </main>
 </body>
