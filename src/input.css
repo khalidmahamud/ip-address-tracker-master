@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer base{
     #top {
         @apply bg-[url('../images/pattern-bg-mobile.png')] md:bg-[url('../images/pattern-bg-desktop.png')] bg-cover bg-center
     }
