@@ -16,6 +16,3 @@
 
 # avoid node_modules folder
 node_modules
-
-#avoid .env file
-.env
