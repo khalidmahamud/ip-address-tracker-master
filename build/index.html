@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <title>Frontend Mentor | IP Address Tracker</title>
+  
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/script.js" defer></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
   <main class="w-screen max-h-screen">
     <div class="w-full h-full flex flex-col items-center justify-center">
       <div id="top" class="w-full h-60 p-5">
+        
         <div class="flex flex-col gap-5 md:gap-7 max-w-lg sm:max-w-xl md:max-w-3xl lg:max-w-4xl mx-auto">
+          
           <h1 class="text-xl sm:text-2xl md:text-3xl font-rubik font-[500] text-white text-center">IP Address Tracker</h1>
+          
           <div class="flex w-full sm:max-w-lg justify-center self-center">
+            
             <input type="search" class="w-full rounded-l-xl px-3 text-xs sm:text-lg" placeholder="Search for any IP address or domain">
             <button type="submit" class="bg-black p-3 sm:p-4 rounded-r-xl"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+          
           </div>
-          <div class="info-card w-full h-auto p-5 lg:px-0 lg:py-7 md:mt-5 relative flex flex-col md:flex-row gap-3 justify-center md:justify-between items-center text-center font-rubik bg-white rounded-xl shadow-lg">
-            <div class="ip-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left">
-              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">IP ADDRESS</p>
+          
+          <div class="info-card w-full md:h-[170px] md:max-h-[170px] p-5 lg:p-7 md:mt-4 relative z-50 flex flex-col md:flex-row gap-3 justify-center md:justify-between items-center text-center font-rubik bg-white rounded-xl shadow-lg">
+            
+            <div class="ip-info md:h-full md:text-left md:pr-7">
+              <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">IP ADDRESS</p>
               <p id="ip-address-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
-            <div class="location-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
-              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">LOCATION</p>
+            
+            <div class="location-info md:w-[25%] md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+              <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">LOCATION</p>
               <p id="location-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
-            <div class="timezone-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
-              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">TIMEZONE</p>
+            
+            <div class="timezone-info md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+              <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">TIMEZONE</p>
               <p id="timezone-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
-            <div class="isp-info md:h-full md:px-5 lg:pl-7 lg:pr-10 md:text-left md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
-              <p class="font-[500] text-[.6rem] sm:text-xs tracking-widest text-Dark-Gray mb-1 md:mb-2">ISP</p>
+            
+            <div class="isp-info md:h-full md:text-left md:pl-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+              <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">ISP</p>
               <p id="isp-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
+          
           </div>
-        </div>
-      </div>
-      <div class="bottom">
         
-        <div class="map"></div>
+        </div>
+      
       </div>
+      
+      <div class="bottom z-10">
+        
+        <div id="map" class="w-screen h-[calc(100vh-240px)]">
+
+        </div>
+      
+      </div>
+    
     </div>
   </main>
 </body>
