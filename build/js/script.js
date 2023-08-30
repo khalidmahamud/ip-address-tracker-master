@@ -48,13 +48,13 @@ const getIPInfo = async (input) => {
         timezone = data.timezone;
         isp = data.isp;
         latitude = data.lat;
-        longitude = data.lng;
+        longitude = data.lon;
 
         ipAddressText.textContent = IPAddress;
         locationText.textContent = `${city}, ${region}, ${country}`;
         timezoneText.textContent = 'UTC ' + timezone;
         ispText.textContent = isp;
-
+        
         addMapTile(latitude, longitude);
 
     } catch (error) {
