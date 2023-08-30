@@ -20,35 +20,35 @@
     <div class="w-full h-full flex flex-col items-center justify-center">
       <div id="top" class="w-full h-60 p-5">
         
-        <div class="flex flex-col gap-5 md:gap-7 max-w-lg sm:max-w-xl md:max-w-3xl lg:max-w-4xl mx-auto">
+        <div class="flex flex-col gap-5 md:gap-7 w-full sm:max-w-5xl mx-auto">
           
           <h1 class="text-xl sm:text-2xl md:text-3xl font-rubik font-[500] text-white text-center">IP Address Tracker</h1>
           
           <div class="flex w-full sm:max-w-lg justify-center self-center">
             
-            <input type="search" class="w-full rounded-l-xl px-3 text-xs sm:text-lg" placeholder="Search for any IP address or domain">
-            <button type="submit" class="bg-black p-3 sm:p-4 rounded-r-xl"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+            <input id="search-bar" type="search" class="w-full rounded-l-xl px-3 text-xs sm:text-lg" placeholder="Search for any IP address or domain">
+            <button id="search-btn" type="submit" class="bg-black p-3 sm:p-4 rounded-r-xl"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
           
           </div>
           
-          <div class="info-card w-full md:h-[170px] md:max-h-[170px] p-5 lg:p-7 md:mt-4 relative z-50 flex flex-col md:flex-row gap-3 justify-center md:justify-between items-center text-center font-rubik bg-white rounded-xl shadow-lg">
+          <div class="info-card w-full md:max-h-[200px] p-5 lg:p-7 md:mt-4 relative z-50 flex flex-col md:flex-row gap-3 justify-center md:justify-between items-center text-center font-rubik bg-white rounded-2xl shadow-lg">
             
-            <div class="ip-info md:h-full md:text-left md:pr-7">
+            <div class="md:flex-1 ip-info md:h-full md:text-left md:pr-7">
               <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">IP ADDRESS</p>
               <p id="ip-address-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
             
-            <div class="location-info md:w-[25%] md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+            <div class="md:flex-1 location-info md:w-[25%] md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
               <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">LOCATION</p>
               <p id="location-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
             
-            <div class="timezone-info md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+            <div class="md:flex-1 timezone-info md:h-full md:text-left md:px-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
               <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">TIMEZONE</p>
               <p id="timezone-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
             
-            <div class="isp-info md:h-full md:text-left md:pl-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
+            <div class="md:flex-1 isp-info md:h-full md:text-left md:pl-7 md:border-l-2 md:border-Dark-Gray md:border-opacity-50">
               <p class="font-[500] text-[.6rem] sm:text-xs md:text-sm tracking-widest text-Dark-Gray mb-1 md:mb-2">ISP</p>
               <p id="isp-text" class="text-Very-Dark-Gray font-[500] text-lg sm:text-2xl"></p>
             </div>
