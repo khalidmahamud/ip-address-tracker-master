@@ -1,4 +1,4 @@
-const apiKey = 'at_Na1kYEbyrfO6P7kXTpk542Qu1fa2S';
+require('dotenv').config();
 
 const infoCard = document.querySelector('.info-card');
 const ipAddressText = document.querySelector('#ip-address-text');
@@ -43,9 +43,9 @@ const getIPInfo = async (input) => {
         const isIPAddress = /^\d+\.\d+\.\d+\.\d+$/.test(input);
         
         if (isIPAddress) {
-            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${input}`;
+            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY}&ipAddress=${input}`;
         } else {
-            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&domain=${input}`;
+            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY}&domain=${input}`;
         }
 
         const response = await fetch(url);
