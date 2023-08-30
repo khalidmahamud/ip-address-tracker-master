@@ -589,6 +589,10 @@ video {
   max-height: 100vh;
 }
 
+.min-h-screen{
+  min-height: 100vh;
+}
+
 .w-full{
   width: 100%;
 }
@@ -722,6 +726,15 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:bg-Dark-Gray:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 59% / var(--tw-bg-opacity));
+}
+
+.hover\:opacity-50:hover{
+  opacity: 0.5;
+}
+
 @media (min-width: 640px){
   .sm\:mx-10{
     margin-left: 2.5rem;
@@ -779,6 +792,10 @@ video {
 
   .md\:max-h-\[200px\]{
     max-height: 200px;
+  }
+
+  .md\:max-h-screen{
+    max-height: 100vh;
   }
 
   .md\:min-h-\[170px\]{

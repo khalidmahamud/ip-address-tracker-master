@@ -24,6 +24,7 @@ const myIcon = L.icon({
 });
 
 
+
 const getUserIPAddress = async () => {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
@@ -91,6 +92,10 @@ const addMapTile = (latitude, longitude) => {
 
     // Add a new marker
     L.marker([latitude, longitude], {icon: myIcon}).addTo(map);
+    map.zoomControl.remove();
+    L.control.zoom({
+        position: 'bottomright'
+    }).addTo(map);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
