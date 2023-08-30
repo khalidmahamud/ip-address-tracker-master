@@ -436,18 +436,6 @@ video {
   display: none;
 }
 
-.top{
-  background-image: url('/build/images/pattern-bg-mobile.png');
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 768px){
-  .top{
-    background-image: url('/build/images/pattern-bg-desktop.png');
-  }
-}
-
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -546,6 +534,18 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+#top{
+  background-image: url('../images/pattern-bg-mobile.png');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px){
+  #top{
+    background-image: url('../images/pattern-bg-desktop.png');
+  }
 }
 
 .relative{
