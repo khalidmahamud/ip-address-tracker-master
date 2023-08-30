@@ -27,9 +27,9 @@ const myIcon = L.icon({
 
 const getUserIPAddress = async () => {
     try {
-        const response = await fetch('https://api.ipify.org?format=json');
+        const response = await fetch('http://ip-api.com/json/');
         const data = await response.json();
-        return data.ip;
+        return data.query;
     } catch (error) {
         console.error('Error fetching data.', error);
     }
@@ -37,27 +37,18 @@ const getUserIPAddress = async () => {
 
 const getIPInfo = async (input) => {
     try {
-        let url;
-
-        // Check if the input is IP address
-        const isIPAddress = /^\d+\.\d+\.\d+\.\d+$/.test(input);
-        
-        if (isIPAddress) {
-            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${input}`;
-        } else {
-            url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&domain=${input}`;
-        }
+        let url = `http://ip-api.com/json/${input}`;
 
         const response = await fetch(url);
         const data = await response.json();
-        IPAddress = data.ip;
-        city = data.location.city;
-        region = data.location.region;
-        country = data.location.country;
-        timezone = data.location.timezone;
+        IPAddress = data.query;
+        city = data.city;
+        region = data.regionName;
+        country = data.country;
+        timezone = data.timezone;
         isp = data.isp;
-        latitude = data.location.lat;
-        longitude = data.location.lng;
+        latitude = data.lat;
+        longitude = data.lng;
 
         ipAddressText.textContent = IPAddress;
         locationText.textContent = `${city}, ${region}, ${country}`;

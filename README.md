@@ -51,5 +51,5 @@ Users should be able to:
 
 - [Leaflet](https://leafletjs.com/index.html) - An open-source JavaScript library
 for mobile-friendly interactive maps
-- [IP Geolocation API](https://geo.ipify.org/) - Our real-time IP Geolocation API lets you look up IP locations accurately.
+- [IP Geolocation API](https://ip-api.com/) - Their real-time IP Geolocation API lets you look up IP locations accurately.
 
