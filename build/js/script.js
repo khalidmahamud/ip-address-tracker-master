@@ -52,11 +52,7 @@ const getIPInfo = async (input) => {
 
         ipAddressText.textContent = IPAddress;
         locationText.textContent = `${city}, ${region}, ${country}`;
-        if(timezone[0] === '-') {
-            timezoneText.textContent = 'UTC ' + timezone + ':00';
-        } else {
-            timezoneText.textContent = 'UTC +' + timezone + ':00';
-        }
+        timezoneText.textContent = 'UTC ' + timezone + ':00';
         ispText.textContent = isp;
         
         addMapTile(latitude, longitude);
