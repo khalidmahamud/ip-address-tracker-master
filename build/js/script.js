@@ -1,4 +1,4 @@
-const apiKey = 'at_Na1kYEbyrfO6P7kXTpk542Qu1fa2S';
+const apiKey = '7321bb01ca46421b99394069ab2ac7b6';
 
 const infoCard = document.querySelector('.info-card');
 const ipAddressText = document.querySelector('#ip-address-text');
@@ -27,9 +27,9 @@ const myIcon = L.icon({
 
 const getUserIPAddress = async () => {
     try {
-        const response = await fetch('http://ip-api.com/json/');
+        const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=7321bb01ca46421b99394069ab2ac7b6`);
         const data = await response.json();
-        return data.query;
+        return data.ip;
     } catch (error) {
         console.error('Error fetching data.', error);
     }
@@ -37,22 +37,26 @@ const getUserIPAddress = async () => {
 
 const getIPInfo = async (input) => {
     try {
-        let url = `http://ip-api.com/json/${input}`;
+        let url = `https://api.ipgeolocation.io/ipgeo?apiKey=7321bb01ca46421b99394069ab2ac7b6&ip=${input}`;
 
         const response = await fetch(url);
         const data = await response.json();
-        IPAddress = data.query;
+        IPAddress = data.ip;
         city = data.city;
-        region = data.regionName;
-        country = data.country;
-        timezone = data.timezone;
+        region = data.state_prov;
+        country = data.country_name;
+        timezone = data.time_zone.offset;
         isp = data.isp;
-        latitude = data.lat;
-        longitude = data.lon;
+        latitude = data.latitude;
+        longitude = data.longitude;
 
         ipAddressText.textContent = IPAddress;
         locationText.textContent = `${city}, ${region}, ${country}`;
-        timezoneText.textContent = 'UTC ' + timezone;
+        if(timezone[0] === '-') {
+            timezoneText.textContent = 'UTC ' + timezone + ':00';
+        } else {
+            timezoneText.textContent = 'UTC +' + timezone + ':00';
+        }
         ispText.textContent = isp;
         
         addMapTile(latitude, longitude);
